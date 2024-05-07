@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .content-box {
+        background-color: white;
+        padding: 10px;
+        margin: 10px;
+        width: 70%;
+        height: 40%;
+        margin-left: 15%;
+        margin-top: 15%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content-box">
+        <h3 style="margin-left: 30%;">Enter the context for finding relations</h3>
+      <form action="/get_relations" method="post">
+        {% csrf_token %}
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          name="query"
+        ></textarea>
+        <button style="margin-top: 2%;" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

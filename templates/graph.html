@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .content-box {
+        background-color: white;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10%;
+        width: 70%;
+        height: 40%;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; align-items: center; flex-direction: column">
+      <h1 style="color: aliceblue">Knowledge Graph</h1>
+      <div class="content-box">
+        <h2>Entity:</h2>
+        {% for e in entity %}
+        <h3>{{ e }}</h3>
+
+        {% endfor %}
+      </div>
+      <div class="content-box">
+        <h2>Relations:</h2>
+        {% for r in relations %}
+        <h3>{{ r }}</h3>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- {{entity}} {{relations}} -->
+  </body>
+</html>
